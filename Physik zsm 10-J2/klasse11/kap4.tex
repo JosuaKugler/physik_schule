@@ -1,0 +1,216 @@
+\section{Schwingungen}
+	\subsection{Schwingungsvorgänge und Schwingungsgrößen}
+	\paragraph{Merkmale einer Schwingung}
+	\begin{enumerate}
+		\item Die Bewegung verläuft periodisch
+		\item Die Bewegung verläuft zwischen 2 Umkehrpunkten und durch einen ausgezeichneten Punkt, die Ruhelage oder Gleichgewichtslage des Oszillators
+	\end{enumerate}
+	\paragraph{Entstehung einer Schwingung}
+	\begin{enumerate}
+		\item Auslenkung des Oszillators aus der Ruhelage (Energiezufuhr)
+		\item Das Vorhandensein einer zur Gleichgewichtslage zurücktreibenden Kraft $F_R$ (Rückstellkraft)
+		\item Die Trägheit des Oszillators aufgrund derer er sich über die Gleichgewichtslage hinausbewegt
+	\end{enumerate}
+	\paragraph{Schwingungsgrößen}
+	\begin{enumerate}
+		\item Periodendauer $T$
+		\begin{equation*}
+			T=\frac{t}{n}
+		\end{equation*}
+		(t Zeit für n Schwingungen)
+		\item Frequenz $f$
+		\begin{equation*}
+			f=\frac{1}{T}
+		\end{equation*}
+		 $[f]=1Hz$
+		 \item Auslenkung aus der Ruhelage Elongation $s(t)$
+		 \item Die \underline{Amplitude} ist die größte Elongation $\hat{s}$
+	\end{enumerate}
+	\subsection{harmonische und nichtharmonische Schwingungen}
+	Eine Schwingung, deren Zeit-Weg-Diagramm eine Sinuskurve ergibt, heißt harmonische Schwingung.
+	\paragraph{Bewegungsgleichung einer harmonischen Schwingung}
+	\begin{align*}
+	&s(t)=\hat{s}*sin(\omega t+\varphi_{0})\\
+	&v(t)=\dot{s}(t)=\hat{s}*\omega*cos(\omega t+\varphi_{0})\\
+	&a(t)=\dot{v}(t)=-\hat{s}*\omega^{2}*sin(\omega t+\varphi_{0})
+	\end{align*}
+
+	\subsection{Zusammenhang zwischen Kraft und Auslenkung: Wiederholung des \underline{Hookeschen Gesetzes}}
+	\paragraph{Federpendel}
+	Die stets zur Ruhelage hin wirkende resultierende Kraft heißt rücktreibende Kraft$F_R$.\newline Beim Federpendel gilt das lineare Kraftgesetz:
+	\begin{equation*}
+		F_{R}=-D*s
+	\end{equation*}
+	\paragraph{Der horizontale Federschwinger}
+	Aus dem Versuch folgt das allgemeine lineare Kraftgesetz:
+	\begin{equation*}
+		F_{R}=-(D_1+D_2)*s
+	\end{equation*}
+	
+	\subsection{Das Kraftgesetz der harmonischen Schwingung}
+	\paragraph{Von der Bewegungsgleichung der harmonischen Schwingung zum linearen Kraftgesetz}
+	\begin{equation}\label{Bewegungsgleichung der harmonischen Schwingung}
+		s(t)=\hat{s}*sin(\omega t+\varphi_{0})
+	\end{equation}
+	Außerdem gilt:
+	\begin{equation}\label{F=m*a}
+		F=m*a(t)=m*\ddot{s}(t)
+	\end{equation}
+	Aus Gleichung \ref{Bewegungsgleichung der harmonischen Schwingung} und \ref{F=m*a} folgt:
+	\begin{subequations}
+		\begin{align}\label{Harmonie-->Linearität}
+			F(t) &=m*(-\hat{s}*\omega^{2}*sin(\omega t+\varphi_{0}))\\
+			&= -m*\omega^{2}*\hat{s}*sin(\omega t+\varphi_{0})\\
+			&= -m*\omega^{2}*s(t)\\
+			&= -D*s(t)
+		\end{align}
+	\end{subequations}
+	Gleichung \ref{Harmonie-->Linearität} ist also gleichbedeutend mit folgender Implikation:\newline
+	Schwingung verläuft harmonisch $\rightarrow$ die zugrunde liegende Kraft muss dem linearen Kraftgesetz gehorchen.
+	\paragraph{Vom linearen Kraftgesetz zur Bewegungsgleichung der harmonischen Schwingung}
+	\begin{subequations}\label{harmonische Schwingung-->lineares Kraftgesetz}
+		\begin{align}
+		F(t)&=-D*s(t)\\
+		m*a(t)&=-D*s(t)\\
+		m*\ddot{s}(t)&=-D*s(t)
+		\end{align}
+		Differentialgleichung zweiter Ordnung
+		\begin{align}
+		\ddot{s}(t)=-\dfrac{D}{m}*s(t)\label{dgl}
+		\end{align}
+		Die Lösungsfunktion, die diese Differentialgleichung löst, lautet:
+		\begin{align}
+		s(t)&=\hat{s}*sin(\sqrt{\dfrac{D}{m}}*t+\varphi_{0})\\
+		&=\hat{s}*sin(\omega*t+\varphi_{0})
+		\end{align}
+		Es gilt: $\omega=\sqrt{\dfrac{D}{m}}$
+		\begin{align}
+		\dot{s}(t)&=\hat{s}*\sqrt{\dfrac{D}{m}}*cos(\sqrt{\dfrac{D}{m}}*t+\varphi_{0})\\
+		\ddot{s}(t)&=-\hat{s}*\dfrac{D}{m}*sin(\sqrt{\dfrac{D}{m}}*t+\varphi_{0})\\
+		&=\underbrace{-\omega^{2}*\hat{s}}_{a} *sin(\omega t+\varphi_{0})\\
+		&=-\dfrac{D}{m}*s(t)\label{lineares Kraftgesetz}
+		\end{align} 
+	\end{subequations}
+	Gleichungssystem \ref{harmonische Schwingung-->lineares Kraftgesetz} ist also gleichbedeutend mit folgender Implikation:\newline
+	Ein lineares Kraftgesetz gilt $\rightarrow$ Die Schwingung verläuft harmonisch
+	\subparagraph{Merke:}
+	Damit s(t) Lösungsfunktion der Differentialgleichung \ref{dgl} ist, muss gelten:
+	\begin{subequations}
+		\begin{align}
+		\omega&=\sqrt{\dfrac{D}{m}}\\
+		&=\dfrac{2\pi}{T}\\
+		&=2*\pi*f
+		\end{align}
+		\begin{align}
+		\hat{v}&=\hat{s}*\omega\\
+		\hat{a}&=\hat{s}*\omega^2
+		\end{align}
+	\end{subequations}
+	\textbf{Lineares Kraftgesetz $\leftrightarrow$ Die Schwingung ist harmonisch}
+	\subsection{Das Fadenpendel}
+	\begin{align}
+	\dfrac{F_R}{F_G}&=sin(\varphi)\nonumber\\
+	F_R&=F_G*sin(\varphi)\nonumber\\
+	&=F_G*sin(\dfrac{s}{l})\nonumber\\
+	&=m*g*sin(\dfrac{s}{l})\nonumber\\
+	\intertext{Mit Taylorreihennäherung dürfen wir für $-30^\circ\le\varphi\le 30^\circ$ annehmen:}
+	F_R&=m*g*\dfrac{s}{l}\nonumber\\
+	&=\underbrace{\dfrac{m*g}{l}}_{D}*s
+	\end{align}
+	Dann hätten wir eine harmonische Schwingung mit dem Zeit-Elongations-Gesetz $s(t)=\hat{s}*sin(\omega t+\varphi_{0})$ mit: 
+	\begin{align*}
+	\omega&=\sqrt{\dfrac{D}{m}}=\sqrt{\dfrac{\dfrac{m*g}{l}}{m}}=\sqrt{\dfrac{g}{l}}\\
+	T&=s*\pi*\sqrt{\dfrac{m}{D}}=2*\pi*\sqrt{\dfrac{g}{l}}
+	\end{align*}
+	\subsection{Energie der harmonischen Schwingung}
+	\begin{align}
+		W_{pot}&=\int F\mathrm{d}s\nonumber\\
+		W_{pot(s)}&=\frac{1}{2}*D*s^2\nonumber\\
+		W_{pot(s)}&=\frac{1}{2}*D*\hat{s}^2
+	\end{align}
+	Die potenzielle Energie $W_{pot}$ errechnet sich aus der Energie, die beim Verschieben des Schwingers aus der Gleichgewichtslage bis zur augenblicklichen Auslenkung s gegen die rücktreibende Kraft $F_R=-D*s$ zuzuführen ist:\\
+	$W_{pot}=\frac{1}{2}*D*s^2$
+	Die kinetische Energie des harmonischen Oszillators zu einem beliebigen Zeitpunkt $t$ ergibt sich aus $W_{kin}=\frac{1}{2}*m*v^2$.\\
+	\begin{subequations}
+		Für $s(t)=\hat{s}*sin(\omega t)$ ergibt sich für $W_{pot}$:
+		\begin{align}
+		W_{pot}&=\frac{1}{2}*D*s_{(t)}\nonumber\\
+		&=\frac{1}{2}*D*\hat{s}^2*sin^2(\omega t)\label{wpot2}
+		\intertext{und für $W_{kin}$:}
+		W_{kin}&=\frac{1}{2}*m*(\hat{s}^2*\omega^2)*cos^2(\omega t)\nonumber\\
+		\intertext{mit}
+		\omega^2&=\dfrac{D}{m}\nonumber\\
+		\intertext{Dies lässt sich vereinfachen zu:}
+		W_{kin}&=\frac{1}{2}*D*\hat{s}^2*cos^2(\omega t)\label{wkin2}
+		\intertext{Aus \ref{wpot2} und \ref{wkin2} folgt:}
+		W_{ges}&=\frac{1}{2}*D*\hat{s}^2*sin^2(\omega t)+\frac{1}{2}*D*\hat{s}^2*cos^2(\omega t)\nonumber\\
+		&=\frac{1}{2}*D*\hat{s}^2*(sin^2(\omega t)+cos^2(\omega t))\nonumber\\
+		W_{Ges}=\frac{1}{2}*D*\hat{s}^2
+		\end{align}
+	\end{subequations}
+	\pagebreak
+	\subsection{Die gedämpfte harmonische Schwingung}
+	Jede freie Schwingung ist gedämpft, da der Oszillator Energie an die Umgebung abgibt.
+	\paragraph{Dämpfung bei konstanter Kraft}
+	gedämpfte Sinuskurve(Heft)
+	\begin{align}
+	\frac{1}{2}*D*\hat{s}_{0}^2-\frac{1}{2}*D*\hat{s}_{1}^2&=F_{reib}*(\hat{s}_0+\hat{s}_1)\nonumber\\
+	\frac{1}{2}*D(\hat{s}_0^2-\hat{s}_1^2)&=F_{reib}*(\hat{s}_0+\hat{s}_1)\nonumber\\
+	\frac{1}{2}*D*(\hat{s}_0-\hat{s}_1)*(\hat{s}_0+\hat{s}_1)&=F_{reib}*(\hat{s}_0+\hat{s}_1)\nonumber\\
+	\frac{1}{2}*D*(\hat{s}_0-\hat{s}_1)&=F_{reib}\nonumber\\
+	\hat{s}_0-\hat{s}_1&=\dfrac{2*F_{reib}}{D}
+	\end{align}
+	Bei der konstanten Reibungskraft $F_{reib}$ nehmen die Amplituden linear ab, d.h. die Amplituden verringern sich von Umkehrpunkt zu Umkehrpunkt stets um den selben Betrag.\\
+	Es gilt:
+	\begin{align}
+		m*\ddot{s}_{(t)}=-D*s-F_{reib}
+	\end{align}
+	\paragraph{Dämpfung durch eine zur Geschwindigkeit proportionale Kraft}
+	\begin{align}
+		m*\ddot{s}_{(t)}=-D*s_{(t)}-k*\dot{s}_{(t)}
+	\end{align}
+	Bei der Lösungsfunktion gilt, dass $\dfrac{\hat{s}_0}{\hat{s}_1}=\dfrac{\hat{s}_1}{\hat{s}_2}=\dfrac{\hat{s}_2}{\hat{s}_3}=const$.
+	\begin{align}
+	\intertext{Aufgabe:\hspace{2mm}Lösung der Differentialgleichung}
+	m*\ddot{s}_{(t)}&=-D*s_{(t)}-k*\dot{s}_{(t)}\nonumber\\
+	m*\ddot{s}_{(t)}+k*\dot{s}_{(t)}+D*s_{(t)}&=0\\
+	\intertext{Annahme:\hspace{2mm}$s_{(t)}=e^{xt}$}
+	m*x^2*e^{xt}+k*x*e^{xt}+D*e^{xt}&=0\nonumber\\
+	\left(m*x^2+k*x+D\right)*e^{xt}&=0\nonumber\\
+	\rightarrow m*x^2+k*x+D&=0
+	\intertext{Diese quadratische Gleichung hat die Lösungen:}
+	x_1&=\frac{-k+\sqrt{k^2-4*m*D}}{2m}\nonumber\\
+	x_2&=\frac{-k-\sqrt{k^2-4*m*D}}{2m}\nonumber
+	\end{align}
+	Für die Lösungsfunktion der Differentialgleichung folgt also:
+	\begin{align}
+	s(t)&=\frac{m*\ddot{s}_{(t)}+k*\dot{s}_{(t)}}{-D}\nonumber\\
+	&=\frac{m*\left(e^{xt}\right)+k*\left(e^{xt}\right)}{-D}\nonumber\\
+	\intertext{Möglichkeit\hspace{2mm}1:}
+	&=\frac{m*e^{\frac{-k+\sqrt{k^2-4*m*D}}{2m}t}+k*e^{\frac{-k+\sqrt{k^2-4*m*D}}{2m}t}}{-D}
+	\intertext{Möglichkeit\hspace{2mm}2:}
+	&=\frac{m*e^{\frac{-k-\sqrt{k^2-4*m*D}}{2m}t}+k*e^{\frac{-k-\sqrt{k^2-4*m*D}}{2m}t}}{-D}	
+	\end{align}
+	\paragraph{Dämpfung durch den Luftwiderstand}
+	\begin{align}
+		m*\ddot{s}_{(t)}=-D*s_{(t)}-b*\dot{s}_{(t)}^{\hspace{2mm}2}
+	\end{align}
+	\subsubsection{Einschub: Tacoma Bridge}
+	\begin{itemize}
+		\item Datum: 7. November 1940
+		\item Name: Tacoma Narrows Bridge
+		\item Spannweite: 853 m
+		\item Zwei in 37 m tiefem Wasser stehende Pylone
+		\item Windgeschwindigkeit: 68 km/h
+		\item Amplitude: 0.6 m 
+	\end{itemize}
+	\subsection{Erzwungene Schwingungen}
+	Überlässt man einen Oszillator nach dem Anstoßen sich selbst, so schwingt er mit der Eigenfrequenz $f_0$ (bzw. $\omega_0=s\pi*f_0$)\\
+	Wenn auf einen Schwinger periodisch eine Kraft $F_1=\hat{F_1}*sin(\omega_{Err}*t)$ ausgeübt wird, führt er eine erzwungene Schwingung aus. Er schwingt dann mit der Frequenz des Erregers $f_{Err}$.\\
+	\underline{Resonanz} tritt auf, wenn $f_{Err}=f_0$.\\
+	Die Differentialgleichung der Schwingung lautet hier:\\
+	\begin{align}
+		m*\ddot{s}_{(t)}=-D*s_{(t)}-k*\dot{s}_{(t)}+\hat{F_1}*sin(\omega_{Err}*t)
+	\end{align}
+	Im Resonanzfall beträgt die Phasendifferenz zwischen Erreger und Oszillator $\dfrac{\pi}{2}$!\\
+	Der Oszillator nimmt besonders viel Energie auf!

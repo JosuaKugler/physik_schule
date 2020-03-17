@@ -1,0 +1,64 @@
+\section{Schwingungskreis}
+\subsection{Wdh. Kondensator}
+\subsection{EES im Schwingkreis}
+$W_{ges}$ ist zeitlich konstant:
+\begin{align*}
+	\dfrac{1}{2}L*I(t)^2+\dfrac{1}{2}*C*U(t)^2&=konst&&|()'\\
+	L*I(t)*I'(t)+C*U(t)*U'(t)&=0&&|U=-L*I'\\
+	L*I(t)*I'(t)+C*(-L*I'(t))*U'(t)&=0\\
+	I'(t)*L*\left(I(t)-C*\dfrac{Q'(t)}{C}\right)&=0
+\end{align*}
+\subsection{Vgl. von Schwingkreis mit mech. Schwingung}
+\begin{align*}
+	U_L&=U_C\\
+	-L*I'(t)&=\dfrac{Q(t)}{C}\\
+	-L*Q''(t)&=\dfrac{1}{C}*Q(t)\\
+	L*Q''(t)+\dfrac{1}{C}*Q(t)&=0&&|\mathrm{DGL\ des\ Schwingkreis}\\
+	m*s''(t)+D*s(t)&=0&&|\mathrm{DGL\ der\ mech.\ Schwingung}\\
+\end{align*}
+\begin{tabular}{l|l}
+	SK & MSchw.\\
+	\hline $L$&$m$\\
+	$\frac{1}{C}$&$D$\\
+	$Q$&$s$\\
+	$Q'=I$&$v=s'$\\
+	$I'$&$a=s''$\\
+	$-\frac{1}{C}*Q=-U_C$&$-D*s(t)=F_R$\\
+	$-L*I'(t)$ &$-m*a(t)$\\
+	$\frac{1}{2}*L*I^2$&$\frac{1}{2}*m*v^2$\\
+	$\frac{1}{2}*\frac{1}{C}*Q(t)^2=\frac{1}{2}*C*U(t)^2$&$\frac{1}{2}*D*s^2$	
+\end{tabular}
+
+\subsection{Wdh. Energieerhaltungssatz der Mechanik}
+\begin{align}
+	F(t)&=m*a(t)&&|*v(t)\\
+	F(t)*v(t)&=m*a(t)*v(t)\\
+	F(t)*v(t)&=m*v'(t)*v(t)&&|\int \mathrm{d}t\\
+	\int F(t)*s'(t)\mathrm{d}t&=\int m*v'(t)*v(t)\mathrm{d}t\\
+	-\int V'(s(t))*s'(t)\mathrm{d}t&=\int m*v'(t)*v(t)\mathrm{d}t\\
+	-V'(s(t))+c_1&=\dfrac{1}{2}*m*v(t)^2+c_2\\
+	c&=\dfrac{1}{2}*m*v(t)^2+V'(s(t))\\
+	const&=E_{kin}+E_{pot}
+\end{align}
+Der Energieerhaltungssatz ist nur dann erfüllt, wenn es eine Funktion gibt, für die gilt: \[-V'(s)=F\]
+
+\subsection{Maxwellgleichungen}
+\begin{subequations}
+	\begin{align}
+	\underbrace{\vec{\nabla}}_{\mathrm{Quelle\ von}}\ast\vec{E}=\dfrac{\sigma}{\epsilon_0}&&|\vec{\nabla}=\begin{pmatrix}\partial x\\\partial y\\\partial z\end{pmatrix}\\
+	\vec{\nabla} \ast\vec{B}=0\\
+	\underbrace{\vec{\nabla} \times}_{\mathrm{Wirbel\ von}} \vec{E}=-\dfrac{\partial B}{\partial t}&&|\mathrm{ Minus\ wegen\ Lenz}\\
+	\vec{\nabla} * \vec{B}=\mu_0*J+\mu_0*\epsilon_0*\dfrac{\partial E}{\partial t}
+	\end{align}
+\end{subequations}
+Im Vakuum sind (a) und (b) symmetrisch. (c) und (d) sind ebenfalls symmetrisch.
+\begin{subequations}
+	\begin{align}
+		\vec{\nabla}\ast\vec{E}&=\dfrac{\sigma_e}{\epsilon_0}\\
+		\vec{\nabla}\ast\vec{B}&=\mu_0*\sigma_m\\
+		\vec{\nabla}\times \vec{E}=-\mu_0*J_m-\dfrac{\partial B}{\partial t}\\
+		\vec{\nabla} \times \vec{B}=\mu_0*J_e+\mu_0\epsilon_0\dfrac{\partial E}{\partial t}	
+	\end{align}
+\end{subequations}
+
+

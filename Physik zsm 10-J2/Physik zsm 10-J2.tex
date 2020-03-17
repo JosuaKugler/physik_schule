@@ -1,0 +1,44 @@
+\documentclass[oneside]{book}
+\usepackage[colorlinks,
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+citecolor = black] {hyperref}
+\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amstext,amsfonts}
+\numberwithin{equation}{section}
+\usepackage{graphicx}
+\graphicspath{{./Bilder/}}
+
+%%Kap1
+\usepackage{stmaryrd} 
+
+\title{Physik Klassen 10 und 11}
+\author{Lucca Kümmerle, Patrick Müller, Josua Kugler}
+\begin{document}
+\begin{flushleft}
+
+	\maketitle
+	\tableofcontents
+	\chapter{Klasse 10}
+	\include{klasse10/klasse10}
+	\chapter{Klasse 11}
+	\include{klasse11/kap1}
+	\include{klasse11/kap2}
+	\include{klasse11/kap3}
+	\include{klasse11/kap4}
+	\include{klasse11/kap5}
+	\include{klasse11/kap6}
+	\include{klasse11/kap7}
+	\chapter{Klasse12}
+	\include{klasse12/beispiel}
+	\chapter*{Disclaimer}
+	\include{disclaimer/Disclaimer}
+\end{flushleft}
+\end{document}

@@ -1,0 +1,205 @@
+\section{Induktion}
+	\subsection{Bewegung eines Leiters im Magnetfeld - Berechnung der Induktionsspannung}
+	Bewegt sich eine Leiterschleife mit der Geschwindigkeit $v_s$ senkrecht zum Magnetfeld, wirkt auf jedes Elektron im Leiter die Lorentzkraft $F_L$.
+	\begin{equation}
+		F_L=e*v*B
+	\end{equation}
+	Sie verschiebt die Elektronen im Leiter. Dadurch wird das eine Ende des Leiters negativ geladen, das andere Ende positiv. Diese Ladungsverteilung erzeugt eine elektrische Feldstärke $E$ im Leiter, die solange anwächst, bis Gleichgewicht zwischen der Lorentzkraft und der elektrischen Kraft besteht.
+		\begin{align}
+		F_L&=F_el\nonumber\\
+		q*v*B&=E*q\nonumber\\
+		v*B&=\dfrac{U_{ind}}{d}\nonumber
+		\end{align}
+		\paragraph{Merke:}
+		\begin{align}
+		U_{ind}=v_s*B*d\\
+		\intertext{mit}\nonumber\\
+		v_s&=\text{Geschwindigkeit senkrecht zum Magnetfeld}\nonumber\\
+		B&=\text{Magnetfeld}\nonumber\\
+		d&=\text{Länge des Leiterstücks im Magnetfeld}\nonumber
+		\end{align}	
+	\subsection{Induktion durch Änderung der senkrecht vom Magnetfeld durchsetzten Fläche}
+	Die Spule werde mit konstanter Geschwindigkeit $v_s$ in das Magnetfeld hineinbewegt.
+	\paragraph{Merke:} Die induzierte Spannung $U_{ind}$ ist desto größer, je größer die Änderungsrate $\dfrac{\Delta A_s}{\Delta t}$ der senkrecht vom Magnetfeld durchsetzten Spulenfläche ist.
+	\begin{subequations}
+		Es gilt:
+		\begin{align}
+		U_{ind}&=n*B*\dfrac{\Delta A_s}{\Delta t}\nonumber\\
+		&=n*B*\lim\limits_{\Delta t\rightarrow 0}  \dfrac{\Delta A_s}{\Delta t}\nonumber\\
+		&=n*B*\dfrac{\mathrm{d} A_s}{\mathrm{d} t}\nonumber\\
+		&=n*B*\dot{A_s}
+		\end{align}
+	\end{subequations}
+	\subsection{Rotation einer Spule im Magnetfeld}
+	Die senkrecht vom B-Feld durchsetzte Fläche ist bei einer rotierenden Spule gegeben durch:
+		\begin{align}
+		A(t)&=\hat{A}*cos(\omega t+\varphi_{0})\\
+		\intertext{mit}
+		\hat{A}&=\text{Amplitude(max. Wert der Fläche $A_s$)}\nonumber\\
+		\varphi_{0}&=\text{Anfangswinkel}\nonumber\\
+		\intertext{und der Winkelgeschwindigkeit}
+		\omega&=\dfrac{2\pi}{T}\nonumber\\
+		[\omega]&=\dfrac{1}{s}=1\text{ Hz}\nonumber\\
+		\intertext{Damit erhält man:}
+		\dot{A}_{(t)}&=-\hat{A}*\omega*sin(\omega t+\varphi_{0})\nonumber\\
+		\intertext{Dadurch ergibt sich für die induzierte Spannung bei der Rotation einer Spule mit n Windungen im Magnetfeld B:}
+		U_{ind}(t)&=n*B*\dot{A}(t)\nonumber\\
+		&=-n*B*\hat{A}*\omega*sin(\omega t+\varphi_{0})\nonumber\\
+		&=-\hat{U}*sin(\omega t*\varphi_{0})		
+		\end{align}
+	\subsection{Magnetfeldänderung}
+	Induktionsspannung aufgrund der Änderung des Magnetfeldes, welches die Querschnittsfläche einer Spule $A_s$ senkrecht durchsetzt:
+	\begin{align}
+		U_{ind}=n*A_s*\dot{B}
+	\end{align}
+	\subsection{Der magnetische Fluss}
+	Der magnetische Fluss ist ein Maß für die Anzahl der Feldlinien, die eine Fläche A durchsetzen.\\
+	Der magnetische Fluss ist definiert als Produkt vo magnetischer Flussdichte B und dem Flächeninhalt $A_s$ der Projektion der Fläche A \underline{senkrecht} zu den Feldlinien.
+	\begin{align}
+	\Phi&=B*A_s\\
+	[\Phi]&=T*m^2=V*s=1\text{Wb(nach Wilhelm Weber)}\nonumber
+	\end{align}
+	\subsection{Allgemeine mathematische Formulierung des Induktionsgesetzes}
+	Wenn sich der magnetische Fluss $\Phi$ durch eine Leiterschleife so ändert, dass er die Ableitung nach der Zeit $\dot{\Phi}(t)$ hat, entsteht die Induktionsspannung
+	\begin{align}
+	U_{ind}&=-n*\dot{\Phi}_{(t)}\\
+	\intertext{mit}
+	-n&=\text{Anzahl der Spulenwindungen}\nonumber\\
+	\dot{\Phi}_{(t)}&=\text{Änderungsrate des Flusses nach der Zeit}\nonumber
+	\end{align}
+	Erste Formulierung von Michael Faraday\\
+	Wie ergeben sich daraus die betrachteten Spezialfälle:
+	\begin{align*}
+	U_{ind}&=-n*\dot{\Phi}_{(t)}\\
+	&=-n*\dot{(A_s*B)}(t)\\
+	&=-n*(\dot{A_s}*B+A_s*\dot{B})_{(t)}
+	\end{align*}
+	\subsection{Lenz´sche Regel- eine andere Formulierung des Energieerhaltungssatzes}
+	Ein induzierter Strom $I_{ind}$ ist so gerichtet, dass das von ihm erzeugte Magnetfeld der Änderung des magnetischen Flusses entgegenwirkt, die den Strom hervorruft.\\
+	Anwendung der Lenz´schen Regel:\\
+	Grafik aus Ordner\\
+	Die Elektronen fließen bei Annäherung des äußeren Magnetfeldes in der Leiterschleife in diese Richtung, da $B_{ind}$ die Zunahme des äußeren Magnetfeldes entgegengesetzt sein muss.
+	\paragraph{Beweis der Gültigkeit des Energieerhaltungssatzes bei Induktionsvorgängen} Um den Stab mit gleichbleibender Geschwindigkeit $\vec{v}$ gegen die bremsende Lorentzkraft $F_L$ zu bewegen, muss eine Zugkraft $F_{Zug}$ aufgebracht werden, die betragsmäßig gleich, aber entgegengerichtet ist.
+	Bei der Verschiebung des Stabes um $\Delta s$ nach rechts wird folgende Arbeit verrichtet:\\
+	\begin{align*}
+		\Delta W_{mech} &= F_{Zug}*\Delta s\\
+		&=I*B*d*\Delta s\\
+		&=\dfrac{U_{ind}}{R}*d*B*\Delta s\\
+		&=\dfrac{B*v*d}{R}*d*B*\Delta s\\
+		&=\dfrac{B^2*d^2*v}{R}*\Delta s\\
+	\end{align*}
+	\begin{align}
+		\Delta W_{mech}&=\dfrac{B^2*d^2*v^2}{R}*\Delta t\label{Wmech}
+	\end{align}
+	Am Widerstand $R$, der z.B. ein elektrisches Gerät sein kann, wird in $\Delta t$ elektrische Energie umgewandelt.
+	\begin{align}
+		\Delta W_{el} &= \underbrace{U_{ind} * I_{ind}}_{P_{el}}*\Delta t\nonumber\\
+		&=B*v*d*\dfrac{B*v*d}{R}*\Delta t\nonumber\\
+		\Delta W_{el}&=\dfrac{B^2*v^2*d^2}{R}*\Delta t\label{Wel}
+	\end{align}
+	Aus \ref{Wmech} und \ref{Wel} folgt, dass bei Induktionsvorgängen der Energieerhaltungssatz erfüllt.\\
+	Die Lenz´sche Regel ist so betrachtet nur eine andere Formulierung des Energieerhaltungssatzes.
+	\subsection{Selbstinduktion}
+	Eine Stromänderung in einer Spule ändert den magnetischen Fluss dieser Spule, wodurch in der Spule selbst wieder eine Spannung induziert wird. Nach der Lenz´schen Regel ist die Induktionsspannung der Stromänderung entgegengerichtet. Der Vorgang heißt Selbstinduktion.\\
+	Def.: Selbstinduktion/Eigeninduktion\\
+	Magnetische Rückwirkung eines sich ändernden elektrischen Stroms auf den eigenen Leiterkreis.\\
+	Grafik aus Ordner\\
+	\paragraph{Induktivität}
+	\begin{align}
+	U_{ind(t)}&=-n*A_s*\hat{B}_{(t)}\nonumber\\
+	&=-n*A*\mu_0*\mu_r*\dfrac{n}{l}*\
+	_{(t)}\nonumber\\
+	&=\underbrace{-n^2*A*\mu_0*\mu_r*l^{-1}}_{L}*\dot{I}_{(t)}
+	\intertext{$L=\mu_0*\mu_r*\dfrac{n^2}{l}*A$ heißt Induktivität der Spule}
+	[L]&=\dfrac{V*s}{A}=\dfrac{\Omega}{s}=1\hspace{2mm}H\hspace{2mm}\mathrm{(Henry)}	
+	\end{align}
+	\paragraph{Einschaltvorgang}
+	\begin{equation}
+	U_{(t)}=U_1-U_{ind}=U_1-L*\dot{I}_{(t)}\nonumber
+	\end{equation}
+	\begin{subequations}
+		\begin{align}
+		I_{(t)}*R&=U_1-L*\dot{I}_{(t)}\label{dfg1}\\
+		I_{(t)}&=\dfrac{U_1}{R}-\dfrac{L}{R}*\dot{I}_{(t)}\\
+		\dot{I}_{(t)}&=\dfrac{U_1-I_{(t)}*R}{L}
+		\intertext{Aus diesem Differentialgleichungssystem folgt:}
+		\dot{I}_{(t)}&=\dfrac{R}{L}*\left( \dfrac{U_1}{R}-I(t)\right)\nonumber\\
+		\rightarrow I_{(t)}&=\dfrac{U_1}{R}*\left( 1-e^{-\frac{R}{L}*t} \right)\\
+		\intertext{Zum Zeitpunkt $t=0s$ gilt $I_{(0s)}=0A$}
+		\rightarrow \dot{I}_{(0s)}&=\dfrac{U_1}{L}\\
+		\intertext{Mit der Zunahme von $I_{(t)}$ wird $\dot{I}_{(t)}$ kleiner}
+		\rightarrow \dot{I}_{\infty}&=0\frac{A}{s}\\
+		\rightarrow I_{\infty}&=\dfrac{U_1}{R}	
+		\end{align}
+	\end{subequations}
+	\paragraph{Merke:}
+	\begin{enumerate}
+		\item Bestimmung von $R$ aus dem Schaubild:\\
+		\subitem 	\begin{equation}
+						R=\dfrac{U_1}{I_{\infty}}
+					\end{equation}
+		\item Bestimmung von $L$ aus dem Schaubild:\\
+		\subitem $\dot{I}_{0s}$ bestimmen;
+		\subitem 	\begin{equation}
+						L=\dfrac{U_1}{\dot{I}_{0s}}
+					\end{equation}
+		\item für größeres $L$ (z.B. Eisenkern):
+		\subitem verzögerter Anstieg,
+		\subitem Schranke bleibt gleich
+		\subitem $\rightarrow$ "wird flacher"
+		\item  für größeres $R$:
+		\subitem Schranke wird niedriger
+		\subitem schnellerer Anstieg
+		\subitem $\dot{I}_{0s}$ ist gleich
+	\end{enumerate}
+	\paragraph{Ausschaltvorgang}
+	Beim Ausschaltvorgang verhindert die Spule ein sofortiges Zusammenbrechen des Stroms.
+	\begin{align}
+	\intertext{aus \ref{dfg1} folgt:}
+	I_{(t)}*R&=0-L*\dot{I}_{(t)}\nonumber\\
+	\dot{I}_{(t)}&=-\dfrac{R}{L}*I_{(t)}
+	\intertext{Lösungsfunktion:}
+	I_{(t)}&=I_{\infty}*e^{-\frac{R}{L}*t}\nonumber\\
+	&=\dfrac{U_1}{R}*e^{-\frac{R}{L}*t}
+	\end{align}
+	\paragraph{Verzweigter Stromkreis}
+	Grafiken im Ordner
+	\subsection{Leistung und Energie im Magnetfeld}
+	Nach Abschalten der äußeren Spannung $U_{1}$ rührt der Strom $I_{(t)}=I_{ind(t)}$ ausschließlich von der Spannung $U_{ind(t)}$ her. Daraus ergibt sich für die Leistung:
+	\begin{align}
+		P_{(t)}&=U_{(t)}*I_{(t)}\nonumber\\
+		\intertext{hier:}
+		&=U_{ind(t)}*I_{ind(t)}\nonumber\\
+		&=-L*\dot{I}_{(t)}*I_{(t)}
+	\end{align} 
+	Die Gesamtenergie, die in der Spule gespeichert ist, ist das Integral der Funktion $W_{mag}=\int_{t_0}^{\infty}P\mathrm{d}t$
+	\begin{align}
+	W_{mag}&=\int_{t_0}^{\infty}-L*\dot{I}_{(t)}*I_{(t)}\mathrm{d}t\nonumber\\
+	%&=\sideset{}{_{t_0}^{\infty}}{\left[-\frac{1}{2} L*I^2_{(t)}\right]}\nonumber\\
+	&=0+\frac{1}{2}*L*I^{2}_{(0)}\nonumber
+	\intertext{Die Energie, die im Feld einer stromdurchflossenen Spule gespeichert ist, berechnet sich allgemein aus:}
+	W_{mag}&=-\frac{1}{2}*L*I^2
+	\intertext{Die Energiedichte im magnetischen Feld $\rho_{mag}$ berechnet sich demnach aus:}
+	\rho_{mag}&=\frac{W_{mag}}{V}\nonumber\\
+	&=\frac{\frac{1}{2}*\mu_0*\mu_r*\frac{n^2}{l}*A*I^2}{V}\nonumber\\
+	&=\frac{1}{2}\frac{B^2}{\mu_0*\mu_r}
+	\end{align}
+	\subsection{Die Maxwell´schen Gleichungen}
+	\begin{subequations}
+		Elektrische Ladungen sind die Quellen und Senken der elektrischen Feldlinien
+		\begin{align}
+		\oint E\mathrm{d}A=\dfrac{Q}{\epsilon_0}
+		\end{align}
+		Der gesamte magnetische Fluss durch jede beliebige geschlossene Fläche ist 0.
+		\begin{align}
+		\oint B\mathrm{d}A=0
+		\end{align}
+		Die Änderung der magnetischen Flussdichte, die eine Fläche durchsetzt, erzeugt ein elektrisches Wirbelfeld um diese Fläche herum
+		\begin{align}
+			\oint E\mathrm{d}l=-\dfrac{d}{dt}\oint BdA
+		\end{align}
+		Ein stromdurchflossener Leiter erzeugt um den Leiter herum ein magnetisches Wirbelfeld. Eine zeitliche Änderung des elektrischen Feldes, das eine Fläche durchsetzt, erzeugt um die Fläche herum ein magnetisches Wirbelfeld
+		\begin{align}
+			\oint B\mathrm{d}l=\mu_0 *I+\mu_0 \epsilon_0\dfrac{d}{dl} \oint EdA
+		\end{align}
+	\end{subequations}

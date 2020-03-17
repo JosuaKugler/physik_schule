@@ -1,0 +1,639 @@
+\documentclass[12 pt]{article}
+\title{Physik LK Rieseberg J1}
+\author{Patrick M\"uller, Josua Kugler}
+\usepackage[colorlinks,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black] {hyperref}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath,amssymb,amstext}
+%\usepackage[fleqn,tbtags]{mathtools}
+\numberwithin{equation}{section}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\pagebreak
+	\section{Elektrische Ladung und elektrisches Feld}
+	
+	\section{Das Magnetfeld und Teilchen in Feldern}
+	
+	\section{Induktion}
+	\subsection{Bewegung eines Leiters im Magnetfeld - Berechnung der Induktionsspannung}
+	Bewegt sich eine Leiterschleife mit der Geschwindigkeit $v_s$ senkrecht zum Magnetfeld, wirkt auf jedes Elektron im Leiter die Lorentzkraft $F_L$.
+	\begin{equation}
+		F_L=e*v*B
+	\end{equation}
+	Sie verschiebt die Elektronen im Leiter. Dadurch wird das eine Ende des Leiters negativ geladen, das andere Ende positiv. Diese Ladungsverteilung erzeugt eine elektrische Feldstärke $E$ im Leiter, die solange anwächst, bis Gleichgewicht zwischen der Lorentzkraft und der elektrischen Kraft besteht.
+		\begin{align}
+		F_L&=F_el\nonumber\\
+		q*v*B&=E*q\nonumber\\
+		v*B&=\dfrac{U_{ind}}{d}\nonumber
+		\end{align}
+		\paragraph{Merke:}
+		\begin{align}
+		U_{ind}=v_s*B*d\\
+		\intertext{mit}\nonumber\\
+		v_s&=\text{Geschwindigkeit senkrecht zum Magnetfeld}\nonumber\\
+		B&=\text{Magnetfeld}\nonumber\\
+		d&=\text{Länge des Leiterstücks im Magnetfeld}\nonumber
+		\end{align}	
+	\subsection{Induktion durch Änderung der senkrecht vom Magnetfeld durchsetzten Fläche}
+	Die Spule werde mit konstanter Geschwindigkeit $v_s$ in das Magnetfeld hineinbewegt.
+	\paragraph{Merke:} Die induzierte Spannung $U_{ind}$ ist desto größer, je größer die Änderungsrate $\dfrac{\Delta A_s}{\Delta t}$ der senkrecht vom Magnetfeld durchsetzten Spulenfläche ist.
+	\begin{subequations}
+		Es gilt:
+		\begin{align}
+		U_{ind}&=n*B*\dfrac{\Delta A_s}{\Delta t}\nonumber\\
+		&=n*B*\lim\limits_{\Delta t\rightarrow 0}  \dfrac{\Delta A_s}{\Delta t}\nonumber\\
+		&=n*B*\dfrac{\mathrm{d} A_s}{\mathrm{d} t}\nonumber\\
+		&=n*B*\dot{A_s}
+		\end{align}
+	\end{subequations}
+	\subsection{Rotation einer Spule im Magnetfeld}
+	Die senkrecht vom B-Feld durchsetzte Fläche ist bei einer rotierenden Spule gegeben durch:
+		\begin{align}
+		A(t)&=\hat{A}*cos(\omega t+\varphi_{0})\\
+		\intertext{mit}
+		\hat{A}&=\text{Amplitude(max. Wert der Fläche $A_s$)}\nonumber\\
+		\varphi_{0}&=\text{Anfangswinkel}\nonumber\\
+		\intertext{und der Winkelgeschwindigkeit}
+		\omega&=\dfrac{2\pi}{T}\nonumber\\
+		[\omega]&=\dfrac{1}{s}=1\text{ Hz}\nonumber\\
+		\intertext{Damit erhält man:}
+		\dot{A}_{(t)}&=-\hat{A}*\omega*sin(\omega t+\varphi_{0})\nonumber\\
+		\intertext{Dadurch ergibt sich für die induzierte Spannung bei der Rotation einer Spule mit n Windungen im Magnetfeld B:}
+		U_{ind}(t)&=n*B*\dot{A}(t)\nonumber\\
+		&=-n*B*\hat{A}*\omega*sin(\omega t+\varphi_{0})\nonumber\\
+		&=-\hat{U}*sin(\omega t*\varphi_{0})		
+		\end{align}
+	\subsection{Magnetfeldänderung}
+	Induktionsspannung aufgrund der Änderung des Magnetfeldes, welches die Querschnittsfläche einer Spule $A_s$ senkrecht durchsetzt:
+	\begin{align}
+		U_{ind}=n*A_s*\dot{B}
+	\end{align}
+	\subsection{Der magnetische Fluss}
+	Der magnetische Fluss ist ein Maß für die Anzahl der Feldlinien, die eine Fläche A durchsetzen.\\
+	Der magnetische Fluss ist definiert als Produkt vo magnetischer Flussdichte B und dem Flächeninhalt $A_s$ der Projektion der Fläche A \underline{senkrecht} zu den Feldlinien.
+	\begin{align}
+	\Phi&=B*A_s\\
+	[\Phi]&=T*m^2=V*s=1\text{Wb(nach Wilhelm Weber)}\nonumber
+	\end{align}
+	\subsection{Allgemeine mathematische Formulierung des Induktionsgesetzes}
+	Wenn sich der magnetische Fluss $\Phi$ durch eine Leiterschleife so ändert, dass er die Ableitung nach der Zeit $\hat{\Phi}(t)$ hat, entsteht die Induktionsspannung
+	\begin{align}
+	U_{ind}&=-n*\hat{\Phi}_{(t)}\\
+	\intertext{mit}
+	-n&=\text{Anzahl der Spulenwindungen}\nonumber\\
+	\dot{\Phi}_{(t)}&=\text{Änderungsrate des Flusses nach der Zeit}\nonumber
+	\end{align}
+	Erste Formulierung von Michael Faraday\\
+	Wie ergeben sich daraus die betrachteten Spezialfälle:
+	\begin{align*}
+	U_{ind}&=-n*\dot{\Phi}_{(t)}\\
+	&=-n*\dot{(A_s*B)}(t)\\
+	&=-n*(\dot{A_s}*B+A_s*\dot{B})_{(t)}
+	\end{align*}
+	\subsection{Lenz´sche Regel- eine andere Formulierung des Energieerhaltungssatzes}
+	Ein induzierter Strom $I_{ind}$ ist so gerichtet, dass das von ihm erzeugte Magnetfeld der Änderung des magnetischen Flusses entgegenwirkt, die den Strom hervorruft.\\
+	Anwendung der Lenz´schen Regel:\\
+	Grafik aus Ordner\\
+	Die Elektronen fließen bei Annäherung des äußeren Magnetfeldes in der Leiterschleife in diese Richtung, da $B_{ind}$ die Zunahme des äußeren Magnetfeldes entgegengesetzt sein muss.
+	\paragraph{Beweis der Gültigkeit des Energieerhaltungssatzes bei Induktionsvorgängen} Um den Stab mit gleichbleibender Geschwindigkeit $\vec{v}$ gegen die bremsende Lorentzkraft $F_L$ zu bewegen, muss eine Zugkraft $F_{Zug}$ aufgebracht werden, die betragsmäßig gleich, aber entgegengerichtet ist.
+	Bei der Verschiebung des Stabes um $\Delta s$ nach rechts wird folgende Arbeit verrichtet:\\
+	\begin{align*}
+		\Delta W_{mech} &= F_{Zug}*\Delta s\\
+		&=I*B*d*\Delta s\\
+		&=\dfrac{U_{ind}}{R}*d*B*\Delta s\\
+		&=\dfrac{B*v*d}{R}*d*B*\Delta s\\
+		&=\dfrac{B^2*d^2*v}{R}*\Delta s\\
+	\end{align*}
+	\begin{align}
+		\Delta W_{mech}&=\dfrac{B^2*d^2*v^2}{R}*\Delta t\label{Wmech}
+	\end{align}
+	Am Widerstand $R$, der z.B. ein elektrisches Gerät sein kann, wird in $\Delta t$ elektrische Energie umgewandelt.
+	\begin{align}
+		\Delta W_{el} &= \underbrace{U_{ind} * I_{ind}}_{P_{el}}*\Delta t\nonumber\\
+		&=B*v*d*\dfrac{B*v*d}{R}*\Delta t\nonumber\\
+		\Delta W_{el}&=\dfrac{B^2*v^2*d^2}{R}*\Delta t\label{Wel}
+	\end{align}
+	Aus \ref{Wmech} und \ref{Wel} folgt, dass bei Induktionsvorgängen der Energieerhaltungssatz erfüllt.\\
+	Die Lenz´sche Regel ist so betrachtet nur eine andere Formulierung des Energieerhaltungssatzes.
+	\subsection{Selbstinduktion}
+	Eine Stromänderung in einer Spule ändert den magnetischen Fluss dieser Spule, wodurch in der Spule selbst wieder eine Spannung induziert wird. Nach der Lenz´schen Regel ist die Induktionsspannung der Stromänderung entgegengerichtet. Der Vorgang heißt Selbstinduktion.\\
+	Def.: Selbstinduktion/Eigeninduktion\\
+	Magnetische Rückwirkung eines sich ändernden elektrischen Stroms auf den eigenen Leiterkreis.\\
+	Grafik aus Ordner\\
+	\paragraph{Induktivität}
+	\begin{align}
+	U_{ind(t)}&=-n*A_s*\hat{B}_{(t)}\nonumber\\
+	&=-n*A*\mu_0*\mu_r*\dfrac{n}{l}*\
+	_{(t)}\nonumber\\
+	&=\underbrace{-n^2*A*\mu_0*\mu_r*l^{-1}}_{L}*\dot{I}_{(t)}
+	\intertext{$L=\mu_0*\mu_r*\dfrac{n^2}{l}*A$ heißt Induktivität der Spule}
+	[L]&=\dfrac{V*s}{A}=\dfrac{\Omega}{s}=1\hspace{2mm}H\hspace{2mm}\mathrm{(Henry)}	
+	\end{align}
+	\paragraph{Einschaltvorgang}
+	\begin{equation}
+	U_{(t)}=U_1-U_{ind}=U_1-L*\dot{I}_{(t)}\nonumber
+	\end{equation}
+	\begin{subequations}
+		\begin{align}
+		I_{(t)}*R&=U_1-L*\dot{I}_{(t)}\label{dfg1}\\
+		I_{(t)}&=\dfrac{U_1}{R}-\dfrac{L}{R}*\dot{I}_{(t)}\\
+		\dot{I}_{(t)}&=\dfrac{U_1-I_{(t)}*R}{L}
+		\intertext{Aus diesem Differentialgleichungssystem folgt:}
+		\dot{I}_{(t)}&=\dfrac{R}{L}*\left( \dfrac{U_1}{R}-I(t)\right)\nonumber\\
+		\rightarrow I_{(t)}&=\dfrac{U_1}{R}*\left( 1-e^{-\frac{R}{L}*t} \right)\\
+		\intertext{Zum Zeitpunkt $t=0s$ gilt $I_{(0s)}=0A$}
+		\rightarrow \dot{I}_{(0s)}&=\dfrac{U_1}{L}\\
+		\intertext{Mit der Zunahme von $I_{(t)}$ wird $\dot{I}_{(t)}$ kleiner}
+		\rightarrow \dot{I}_{\infty}&=0\frac{A}{s}\\
+		\rightarrow I_{\infty}&=\dfrac{U_1}{R}	
+		\end{align}
+	\end{subequations}
+	\paragraph{Merke:}
+	\begin{enumerate}
+		\item Bestimmung von $R$ aus dem Schaubild:\\
+		\subitem 	\begin{equation}
+						R=\dfrac{U_1}{I_{\infty}}
+					\end{equation}
+		\item Bestimmung von $L$ aus dem Schaubild:\\
+		\subitem $\dot{I}_{0s}$ bestimmen;
+		\subitem 	\begin{equation}
+						L=\dfrac{U_1}{\dot{I}_{0s}}
+					\end{equation}
+		\item für größeres $L$ (z.B. Eisenkern):
+		\subitem verzögerter Anstieg,
+		\subitem Schranke bleibt gleich
+		\subitem $\rightarrow$ "wird flacher"
+		\item  für größeres $R$:
+		\subitem Schranke wird niedriger
+		\subitem schnellerer Anstieg
+		\subitem $\dot{I}_{0s}$ ist gleich
+	\end{enumerate}
+	\paragraph{Ausschaltvorgang}
+	Beim Ausschaltvorgang verhindert die Spule ein sofortiges Zusammenbrechen des Stroms.
+	\begin{align}
+	\intertext{aus \ref{dfg1} folgt:}
+	I_{(t)}*R&=0-L*\dot{I}_{(t)}\nonumber\\
+	\dot{I}_{(t)}&=-\dfrac{R}{L}*I_{(t)}
+	\intertext{Lösungsfunktion:}
+	I_{(t)}&=I_{\infty}*e^{-\frac{R}{L}*t}\nonumber\\
+	&=\dfrac{U_1}{R}*e^{-\frac{R}{L}*t}
+	\end{align}
+	\paragraph{Verzweigter Stromkreis}
+	Grafiken im Ordner
+	\subsection{Leistung und Energie im Magnetfeld}
+	Nach Abschalten der äußeren Spannung $U_{1}$ rührt der Strom $I_{(t)}=I_{ind(t)}$ ausschließlich von der Spannung $U_{ind(t)}$ her. Daraus ergibt sich für die Leistung:
+	\begin{align}
+		P_{(t)}&=U_{(t)}*I_{(t)}\nonumber\\
+		\intertext{hier:}
+		&=U_{ind(t)}*I_{ind(t)}\nonumber\\
+		&=-L*\dot{I}_{(t)}*I_{(t)}
+	\end{align} 
+	Die Gesamtenergie, die in der Spule gespeichert ist, ist das Integral der Funktion $W_{mag}=\int_{t_0}^{\infty}P\mathrm{d}t$
+	\begin{align}
+	W_{mag}&=\int_{t_0}^{\infty}-L*\dot{I}_{(t)}*I_{(t)}\mathrm{d}t\nonumber\\
+	%&=\sideset{}{_{t_0}^{\infty}}{\left[-\frac{1}{2} L*I^2_{(t)}\right]}\nonumber\\
+	&=0+\frac{1}{2}*L*I^{2}_{(0)}\nonumber
+	\intertext{Die Energie, die im Feld einer stromdurchflossenen Spule gespeichert ist, berechnet sich allgemein aus:}
+	W_{mag}&=-\frac{1}{2}*L*I^2
+	\intertext{Die Energiedichte im magnetischen Feld $\rho_{mag}$ berechnet sich demnach aus:}
+	\rho_{mag}&=\frac{W_{mag}}{V}\nonumber\\
+	&=\frac{\frac{1}{2}*\mu_0*\mu_r*\frac{n^2}{l}*A*I^2}{V}\nonumber\\
+	&=\frac{1}{2}\frac{B^2}{\mu_0*\mu_r}
+	\end{align}
+	\subsection{Die Maxwell´schen Gleichungen}
+	\begin{subequations}
+		Elektrische Ladungen sind die Quellen und Senken der elektrischen Feldlinien
+		\begin{align}
+		\oint E\mathrm{d}A=\dfrac{Q}{\epsilon_0}
+		\end{align}
+		Der gesamte magnetische Fluss durch jede beliebige geschlossene Fläche ist 0.
+		\begin{align}
+		\oint B\mathrm{d}A=0
+		\end{align}
+		Die Änderung der magnetischen Flussdichte, die eine Fläche durchsetzt, erzeugt ein elektrisches Wirbelfeld um diese Fläche herum
+		\begin{align}
+			\oint E\mathrm{d}l=-\dfrac{d}{dt}\oint BdA
+		\end{align}
+		Ein stromdurchflossener Leiter erzeugt um den Leiter herum ein magnetisches Wirbelfeld. Eine zeitliche Änderung des elektrischen Feldes, das eine Fläche durchsetzt, erzeugt um die Fläche herum ein magnetisches Wirbelfeld
+		\begin{align}
+			\oint B\mathrm{d}l=\mu_0 *I+\mu_0 \epsilon_0\dfrac{d}{dl} \oint EdA
+		\end{align}
+	\end{subequations}	
+	\section{Schwingungen}
+	\subsection{Schwingungsvorgänge und Schwingungsgrößen}
+	\paragraph{Merkmale einer Schwingung}
+	\begin{enumerate}
+		\item Die Bewegung verläuft periodisch
+		\item Die Bewegung verläuft zwischen 2 Umkehrpunkten und durch einen ausgezeichneten Punkt, die Ruhelage oder Gleichgewichtslage des Oszillators
+	\end{enumerate}
+	\paragraph{Entstehung einer Schwingung}
+	\begin{enumerate}
+		\item Auslenkung des Oszillators aus der Ruhelage (Energiezufuhr)
+		\item Das Vorhandensein einer zur Gleichgewichtslage zurücktreibenden Kraft $F_R$ (Rückstellkraft)
+		\item Die Trägheit des Oszillators aufgrund derer er sich über die Gleichgewichtslage hinausbewegt
+	\end{enumerate}
+	\paragraph{Schwingungsgrößen}
+	\begin{enumerate}
+		\item Periodendauer $T$
+		\begin{equation*}
+			T=\frac{t}{n}
+		\end{equation*}
+		(t Zeit für n Schwingungen)
+		\item Frequenz $f$
+		\begin{equation*}
+			f=\frac{1}{T}
+		\end{equation*}
+		 $[f]=1Hz$
+		 \item Auslenkung aus der Ruhelage Elongation $s(t)$
+		 \item Die \underline{Amplitude} ist die größte Elongation $\hat{s}$
+	\end{enumerate}
+	\subsection{harmonische und nichtharmonische Schwingungen}
+	Eine Schwingung, deren Zeit-Weg-Diagramm eine Sinuskurve ergibt, heißt harmonische Schwingung.
+	\paragraph{Bewegungsgleichung einer harmonischen Schwingung}
+	\begin{align*}
+	&s(t)=\hat{s}*sin(\omega t+\varphi_{0})\\
+	&v(t)=\dot{s}(t)=\hat{s}*\omega*cos(\omega t+\varphi_{0})\\
+	&a(t)=\dot{v}(t)=-\hat{s}*\omega^{2}*sin(\omega t+\varphi_{0})
+	\end{align*}
+
+	\subsection{Zusammenhang zwischen Kraft und Auslenkung: Wiederholung des \underline{Hookeschen Gesetzes}}
+	\paragraph{Federpendel}
+	Die stets zur Ruhelage hin wirkende resultierende Kraft heißt rücktreibende Kraft$F_R$.\newline Beim Federpendel gilt das lineare Kraftgesetz:
+	\begin{equation*}
+		F_{R}=-D*s
+	\end{equation*}
+	\paragraph{Der horizontale Federschwinger}
+	Aus dem Versuch folgt das allgemeine lineare Kraftgesetz:
+	\begin{equation*}
+		F_{R}=-(D_1+D_2)*s
+	\end{equation*}
+	
+	\subsection{Das Kraftgesetz der harmonischen Schwingung}
+	\paragraph{Von der Bewegungsgleichung der harmonischen Schwingung zum linearen Kraftgesetz}
+	\begin{equation}\label{Bewegungsgleichung der harmonischen Schwingung}
+		s(t)=\hat{s}*sin(\omega t+\varphi_{0})
+	\end{equation}
+	Außerdem gilt:
+	\begin{equation}\label{F=m*a}
+		F=m*a(t)=m*\ddot{s}(t)
+	\end{equation}
+	Aus Gleichung \ref{Bewegungsgleichung der harmonischen Schwingung} und \ref{F=m*a} folgt:
+	\begin{subequations}
+		\begin{align}\label{Harmonie-->Linearität}
+			F(t) &=m*(-\hat{s}*\omega^{2}*sin(\omega t+\varphi_{0}))\\
+			&= -m*\omega^{2}*\hat{s}*sin(\omega t+\varphi_{0})\\
+			&= -m*\omega^{2}*s(t)\\
+			&= -D*s(t)
+		\end{align}
+	\end{subequations}
+	Gleichung \ref{Harmonie-->Linearität} ist also gleichbedeutend mit folgender Implikation:\newline
+	Schwingung verläuft harmonisch $\rightarrow$ die zugrunde liegende Kraft muss dem linearen Kraftgesetz gehorchen.
+	\paragraph{Vom linearen Kraftgesetz zur Bewegungsgleichung der harmonischen Schwingung}
+	\begin{subequations}\label{harmonische Schwingung-->lineares Kraftgesetz}
+		\begin{align}
+		F(t)&=-D*s(t)\\
+		m*a(t)&=-D*s(t)\\
+		m*\ddot{s}(t)&=-D*s(t)
+		\end{align}
+		Differentialgleichung zweiter Ordnung
+		\begin{align}
+		\ddot{s}(t)=-\dfrac{D}{m}*s(t)\label{dgl}
+		\end{align}
+		Die Lösungsfunktion, die diese Differentialgleichung löst, lautet:
+		\begin{align}
+		s(t)&=\hat{s}*sin(\sqrt{\dfrac{D}{m}}*t+\varphi_{0})\\
+		&=\hat{s}*sin(\omega*t+\varphi_{0})
+		\end{align}
+		Es gilt: $\omega=\sqrt{\dfrac{D}{m}}$
+		\begin{align}
+		\dot{s}(t)&=\hat{s}*\sqrt{\dfrac{D}{m}}*cos(\sqrt{\dfrac{D}{m}}*t+\varphi_{0})\\
+		\ddot{s}(t)&=-\hat{s}*\dfrac{D}{m}*sin(\sqrt{\dfrac{D}{m}}*t+\varphi_{0})\\
+		&=\underbrace{-\omega^{2}*\hat{s}}_{a} *sin(\omega t+\varphi_{0})\\
+		&=-\dfrac{D}{m}*s(t)\label{lineares Kraftgesetz}
+		\end{align} 
+	\end{subequations}
+	Gleichungssystem \ref{harmonische Schwingung-->lineares Kraftgesetz} ist also gleichbedeutend mit folgender Implikation:\newline
+	Ein lineares Kraftgesetz gilt $\rightarrow$ Die Schwingung verläuft harmonisch
+	\subparagraph{Merke:}
+	Damit s(t) Lösungsfunktion der Differentialgleichung \ref{dgl} ist, muss gelten:
+	\begin{subequations}
+		\begin{align}
+		\omega&=\sqrt{\dfrac{D}{m}}\\
+		&=\dfrac{2\pi}{T}\\
+		&=2*\pi*f
+		\end{align}
+		\begin{align}
+		\hat{v}&=\hat{s}*\omega\\
+		\hat{a}&=\hat{s}*\omega^2
+		\end{align}
+	\end{subequations}
+	\textbf{Lineares Kraftgesetz $\leftrightarrow$ Die Schwingung ist harmonisch}
+	\subsection{Das Fadenpendel}
+	\begin{align}
+	\dfrac{F_R}{F_G}&=sin(\varphi)\nonumber\\
+	F_R&=F_G*sin(\varphi)\nonumber\\
+	&=F_G*sin(\dfrac{s}{l})\nonumber\\
+	&=m*g*sin(\dfrac{s}{l})\nonumber\\
+	\intertext{Mit Taylorreihennäherung dürfen wir für $-30^\circ\le\varphi\le 30^\circ$ annehmen:}
+	F_R&=m*g*\dfrac{s}{l}\nonumber\\
+	&=\underbrace{\dfrac{m*g}{l}}_{D}*s
+	\end{align}
+	Dann hätten wir eine harmonische Schwingung mit dem Zeit-Elongations-Gesetz $s(t)=\hat{s}*sin(\omega t+\varphi_{0})$ mit: 
+	\begin{align*}
+	\omega&=\sqrt{\dfrac{D}{m}}=\sqrt{\dfrac{\dfrac{m*g}{l}}{m}}=\sqrt{\dfrac{g}{l}}\\
+	T&=s*\pi*\sqrt{\dfrac{m}{D}}=2*\pi*\sqrt{\dfrac{g}{l}}
+	\end{align*}
+	\subsection{Energie der harmonischen Schwingung}
+	\begin{align}
+		W_{pot}&=\int F\mathrm{d}s\nonumber\\
+		W_{pot(s)}&=\frac{1}{2}*D*s^2\nonumber\\
+		W_{pot(s)}&=\frac{1}{2}*D*\hat{s}^2
+	\end{align}
+	Die potenzielle Energie $W_{pot}$ errechnet sich aus der Energie, die beim Verschieben des Schwingers aus der Gleichgewichtslage bis zur augenblicklichen Auslenkung s gegen die rücktreibende Kraft $F_R=-D*s$ zuzuführen ist:\\
+	$W_{pot}=\frac{1}{2}*D*s^2$
+	Die kinetische Energie des harmonischen Oszillators zu einem beliebigen Zeitpunkt $t$ ergibt sich aus $W_{kin}=\frac{1}{2}*m*v^2$.\\
+	\begin{subequations}
+		Für $s(t)=\hat{s}*sin(\omega t)$ ergibt sich für $W_{pot}$:
+		\begin{align}
+		W_{pot}&=\frac{1}{2}*D*s_{(t)}\nonumber\\
+		&=\frac{1}{2}*D*\hat{s}^2*sin^2(\omega t)\label{wpot2}
+		\intertext{und für $W_{kin}$:}
+		W_{kin}&=\frac{1}{2}*m*(\hat{s}^2*\omega^2)*cos^2(\omega t)\nonumber\\
+		\intertext{mit}
+		\omega^2&=\dfrac{D}{m}\nonumber\\
+		\intertext{Dies lässt sich vereinfachen zu:}
+		W_{kin}&=\frac{1}{2}*D*\hat{s}^2*cos^2(\omega t)\label{wkin2}
+		\intertext{Aus \ref{wpot2} und \ref{wkin2} folgt:}
+		W_{ges}&=\frac{1}{2}*D*\hat{s}^2*sin^2(\omega t)+\frac{1}{2}*D*\hat{s}^2*cos^2(\omega t)\nonumber\\
+		&=\frac{1}{2}*D*\hat{s}^2*(sin^2(\omega t)+cos^2(\omega t))\nonumber\\
+		W_{Ges}=\frac{1}{2}*D*\hat{s}^2
+		\end{align}
+	\end{subequations}
+	\pagebreak
+	\subsection{Die gedämpfte harmonische Schwingung}
+	Jede freie Schwingung ist gedämpft, da der Oszillator Energie an die Umgebung abgibt.
+	\paragraph{Dämpfung bei konstanter Kraft}
+	gedämpfte Sinuskurve(Heft)
+	\begin{align}
+	\frac{1}{2}*D*\hat{s}_{0}^2-\frac{1}{2}*D*\hat{s}_{1}^2&=F_{reib}*(\hat{s}_0+\hat{s}_1)\nonumber\\
+	\frac{1}{2}*D(\hat{s}_0^2-\hat{s}_1^2)&=F_{reib}*(\hat{s}_0+\hat{s}_1)\nonumber\\
+	\frac{1}{2}*D*(\hat{s}_0-\hat{s}_1)*(\hat{s}_0+\hat{s}_1)&=F_{reib}*(\hat{s}_0+\hat{s}_1)\nonumber\\
+	\frac{1}{2}*D*(\hat{s}_0-\hat{s}_1)&=F_{reib}\nonumber\\
+	\hat{s}_0-\hat{s}_1&=\dfrac{2*F_{reib}}{D}
+	\end{align}
+	Bei der konstanten Reibungskraft $F_{reib}$ nehmen die Amplituden linear ab, d.h. die Amplituden verringern sich von Umkehrpunkt zu Umkehrpunkt stets um den selben Betrag.\\
+	Es gilt:
+	\begin{align}
+		m*\ddot{s}_{(t)}=-D*s-F_{reib}
+	\end{align}
+	\paragraph{Dämpfung durch eine zur Geschwindigkeit proportionale Kraft}
+	\begin{align}
+		m*\ddot{s}_{(t)}=-D*s_{(t)}-k*\dot{s}_{(t)}
+	\end{align}
+	Bei der Lösungsfunktion gilt, dass $\dfrac{\hat{s}_0}{\hat{s}_1}=\dfrac{\hat{s}_1}{\hat{s}_2}=\dfrac{\hat{s}_2}{\hat{s}_3}=const$.
+	\begin{align}
+	\intertext{Aufgabe:\hspace{2mm}Lösung der Differentialgleichung}
+	m*\ddot{s}_{(t)}&=-D*s_{(t)}-k*\dot{s}_{(t)}\nonumber\\
+	m*\ddot{s}_{(t)}+k*\dot{s}_{(t)}+D*s_{(t)}&=0\\
+	\intertext{Annahme:\hspace{2mm}$s_{(t)}=e^{xt}$}
+	m*x^2*e^{xt}+k*x*e^{xt}+D*e^{xt}&=0\nonumber\\
+	\left(m*x^2+k*x+D\right)*e^{xt}&=0\nonumber\\
+	\rightarrow m*x^2+k*x+D&=0
+	\intertext{Diese quadratische Gleichung hat die Lösungen:}
+	x_1&=\frac{-k+\sqrt{k^2-4*m*D}}{2m}\nonumber\\
+	x_2&=\frac{-k-\sqrt{k^2-4*m*D}}{2m}\nonumber
+	\end{align}
+	Für die Lösungsfunktion der Differentialgleichung folgt also:
+	\begin{align}
+	s(t)&=\frac{m*\ddot{s}_{(t)}+k*\dot{s}_{(t)}}{-D}\nonumber\\
+	&=\frac{m*\left(e^{xt}\right)+k*\left(e^{xt}\right)}{-D}\nonumber\\
+	\intertext{Möglichkeit\hspace{2mm}1:}
+	&=\frac{m*e^{\frac{-k+\sqrt{k^2-4*m*D}}{2m}t}+k*e^{\frac{-k+\sqrt{k^2-4*m*D}}{2m}t}}{-D}
+	\intertext{Möglichkeit\hspace{2mm}2:}
+	&=\frac{m*e^{\frac{-k-\sqrt{k^2-4*m*D}}{2m}t}+k*e^{\frac{-k-\sqrt{k^2-4*m*D}}{2m}t}}{-D}	
+	\end{align}
+	\paragraph{Dämpfung durch den Luftwiderstand}
+	\begin{align}
+		m*\ddot{s}_{(t)}=-D*s_{(t)}-b*\dot{s}_{(t)}^{\hspace{2mm}2}
+	\end{align}
+	\subsubsection{Einschub: Tacoma Bridge}
+	\begin{itemize}
+		\item Datum: 7. November 1940
+		\item Name: Tacoma Narrows Bridge
+		\item Spannweite: 853 m
+		\item Zwei in 37 m tiefem Wasser stehende Pylone
+		\item Windgeschwindigkeit: 68 km/h
+		\item Amplitude: 0.6 m 
+	\end{itemize}
+	\subsection{Erzwungene Schwingungen}
+	Überlässt man einen Oszillator nach dem Anstoßen sich selbst, so schwingt er mit der Eigenfrequenz $f_0$ (bzw. $\omega_0=s\pi*f_0$)\\
+	Wenn auf einen Schwinger periodisch eine Kraft $F_1=\hat{F_1}*sin(\omega_{Err}*t)$ ausgeübt wird, führt er eine erzwungene Schwingung aus. Er schwingt dann mit der Frequenz des Erregers $f_{Err}$.\\
+	\underline{Resonanz} tritt auf, wenn $f_{Err}=f_0$.\\
+	Die Differentialgleichung der Schwingung lautet hier:\\
+	\begin{align}
+		m*\ddot{s}_{(t)}=-D*s_{(t)}-k*\dot{s}_{(t)}+\hat{F_1}*sin(\omega_{Err}*t)
+	\end{align}
+	Im Resonanzfall beträgt die Phasendifferenz zwischen Erreger und Oszillator $\dfrac{\pi}{2}$!\\
+	Der Oszillator nimmt besonders viel Energie auf!\\
+	
+	\section{Wellen}
+	
+	\subsection{Definition}
+	
+	\paragraph{Beispiele:} Elektromagnetische Wellen (Radio, Licht,...)
+	Schallwellen, Wasserwellen, Erdbebenwelle...
+	
+	\paragraph{Welle:} Ein sich räumlich fortpflanzender Bewegungszustand, der \underline{Energie} aber keine \underline{Materie} transportiert
+	
+	\paragraph{Wellenausbreitung im Medium:}Jeder Oszillator ist an seine Nachbarn gekoppelt und wird zu einer erzwungenen Schwingung angeregt.
+	%Bild Schwingung
+	Das 3. Teilchen beschleunigt das 4. Teilchen und erfährt die reactio. Die Ausbreitung erfolgt umso schneller, je größer $D$ und je kleiner $m$ ist $(a=\dfrac{F}{m})$
+	
+	\subsection{Wichtige physikalische Größen}
+	Während ein einzelner Oszillator eine Schwingung (mit der Periodendauer $T$) ausführt, ist die Welle gerade eine Wellenlänge $\lambda$ weiter vorgerückt.\\
+	Also beträgt die Ausbreitungsgeschwindigkeit c der Welle:
+	\begin{align}
+		c=\dfrac{\lambda}{T}=\lambda*f
+	\end{align}
+	Die Geschwindigkeit jedes einzelnen Oszillators $v$ bei der erzwungenen Schwingung wird -zur Unterscheidung von der Ausbreitungsgeschwindigkeit c- \underline{Schnelle $v$} bezeichnet.
+	
+	\paragraph{Transversalwelle:} Bei einer Transversalwelle steht der Schwingungsvektor senkrecht zur Ausbreitungsrichtung.
+	Wellenberge und Wellentäler laufen über den Wellenträger.
+	
+	Bsp.: elektromagnetische Wellen, S-Wellen beim Erdbeben\\
+	\underline{Mechanische} Transversalwellen können nur entstehen, wenn zwischen den Oszillatoren \underline{elastische Querkräfte} wirksam sind (also nur im Festkörper)
+	%Zeichnung , \vec{v} \perp \vec{c}
+	
+	\paragraph{Longitudinalwelle:} Bei einer Longitudinalwelle steht der Schwingungsvektor \underline{parallel} zur Ausbreitungsrichtung. \underline{Verdichtungen} und Verdünnungen laufen über den Wellenträger.
+	
+	Bsp.: Schallwellen\\
+	Longitudinalwellen können dann entstehen, wenn zwischen den Oszillatoren Kräfte wirksam sind, die der Volumenänderung entgegenwirken. Mechanische Longitudinalwellen sind "Druckwellen" (existieren in Festkörper, Flüssigkeiten und Gasen)
+	%Zeichnung, \vec{v} \parallel \vec{c}
+	
+	Die Ausbreitungsgeschwindigkeit $c$ wird auch \underline{Phasen}geschwindigkeit ($v_{ph}$) genannt, weil sie die Geschwindigkeit, mit der sich eine bestimmte Phasenlage der Oszillatoren über den Wellenträger ausbreitet.
+	
+	\subsection{Zeitliche und räumliche Darstellung einer Welle}
+
+	%zeitlicher Durchblick s-t, Bsp.: c= 1m/s, T=2s Kommentar: Schwingung des Oszillators über die Zeit betrachtet
+	%räumlicher Durchblick s
+	
+	Beim zeitlichen Durchblick ist der zeitliche Verlauf der erzwungenen Schwingung an einem Ort dargestellt.
+	
+	Beim räumlichen Durchblick zu einem Zeitpunkt $t$ stellt sich die Welle dar wie man sie zu diesem Zeitpunkt im Raum sieht.(Fotografie)
+	Der Oszillator am Kopf der Welle beginnt gerade zu diesem Zeitpunkt seine Schwingung, sein Nachbaroszillator schwingt bereits einen kurzen Moment, dessen Nachbaroszillator schwingt noch einen Moment länger etc. Man sieht alle Phasenzustände nebeneinandergelegt. 
+	
+	Beim diagonalen Durchblick verfolgt man eine bestimmte Schwingungsphase (z.B. den Kopf der Welle oder den ersten Wellenberg) bei seiner Wanderung über den Wellenträger.
+	
+	\subsection{Die Bewegungsgleichung einer Welle}
+	
+	\begin{itemize}
+		\item Oszillator am Punkt $x=0$, der zum Zeitpunkt $t=0s$ von der Welle erfasst wird:
+		\begin{equation}
+			s_{(0\hspace{1mm}cm;t)}=\hat{s}*sin(\omega t)
+		\end{equation}
+		\item Oszillator am Punkt $x$, der zum Zeitpunkt $t$ von der Welle erfasst wird:
+		\begin{align}
+			s_{(x,t)}&=\hat{s}*sin(\omega(t-\dfrac{x}{c}))\\
+			&=\hat{s}*sin(\omega t-\omega\dfrac{x}{c})\\
+			&=\hat{s}*sin(\omega t-\dfrac{2\pi}{T}\dfrac{x}{c})\\
+			(&=\hat{s}*sin(\dfrac{2\pi}{T}t-\dfrac{2\pi}{\lambda}x))		
+		\end{align}
+	\end{itemize}
+	\paragraph{Differentialgleichung}Die Bewegungsgleichung ist die Lösungsfunktion der Differentialgleichung der Welle:
+	\begin{align}
+		F_{(x,t)}=m*\ddot{s}_{(x,t)}
+	\end{align}
+	Die Kraft auf einen Oszillator ist proportional zur Krümmung der Kurve $s_{(x,t)}$
+	\begin{align}
+		F_{(x,t)}&=D*s''(x,t)\\
+		D*s''_{(x,t)}&=m*\ddot{s}_{(x,t)}
+	\end{align}
+	Kontrolle: Einsetzen von $s_{x,t}=\hat{s}*sin(\omega t-\dfrac{2\pi}{\lambda}x)$
+	\begin{align}
+		D\left( -\hat{s}*\left(\dfrac{2 \pi}{\lambda}\right)^2 *sin(\omega t-\dfrac{2 \pi}{\lambda}*x)\right) &=m\left(-\hat{s}*\omega^2*sin(\omega t-\dfrac{2 \pi}{\lambda}*x)\right)\nonumber\\
+		D*\left(\dfrac{2 \pi}{\lambda}\right)^2&=m*\omega^2\\
+		D*\left(\dfrac{2 \pi}{\lambda}\right)^2&=m*\left(\dfrac{2 \pi}{T}\right)^2\\
+		D*\dfrac{1}{\lambda^2}&=m*\dfrac{1}{T^2}\\
+		\dfrac{D}{m}&=\dfrac{\lambda^2}{T^2}=c^2\\
+		c&=\sqrt{\dfrac{D}{m}}
+	\end{align}
+	\paragraph{Zeigerdarstellung}
+	Jedem Oszillator am Ort $x$ kann ein Zeiger zugeordnet werden, der gegen den Uhrzeigersinn rotiert und dessen y-Komponente die momentane Elongation $s_{(x,t)}$ angibt.
+	\subsection{Einschub: Überlagerung zweier harmonischer Schwingungen an einem Ort}
+	Die Zeiger von $s_1$ und $s_2$ rotieren mit der gleichen Winkelgeschwindigkeit $\omega$ gegen den Uhrzeigersinn. Ihre relative Lage zueinander bleibt dabei immer gleich. Das Zeigerdiagramm ermöglicht es uns, durch die vektorielle Addition der Zeiger von $s_1$ und $s_2$ den resultierenden Zeiger zu bestimmen. Die Länge des resultierenden Zeigers entspricht $\hat{s}_{res}$, die Phasendifferenz $\delta \varphi$ bezüglich $s_1$ gibt an, um welche Phase der Schwingung $s$ gegenüber $s_1$ vorauseilt. Zudem erhält man die aktuelle Phasenlage des Zeigers für den Zeitpunkt, den das Zeigerdiagramm darstellt.
+	\subsection{Überlagerung von Wellen-allgemeines Prinzip}
+	%roter Kasten
+	\paragraph{Prinzip der ungestörten Überlagerung von Wellen}
+	Treffen an einer Stelle eines Wellenträgers mehrere Wellen aufeinander, so addieren sich dort die Elongationen und Schnellen der Schwingungen. Nach dem Zusammentreffen laufen die Wellen ungestört weiter.
+	
+	Die ungestörte Überlagerung mehrerer Wellen von gleicher Frequenz(und damit gleicher Wellenlänge) wird als Interferenz bezeichnet
+	\subsection{Interferenz}
+	\subsubsection{Überlagerung gleichlaufender Wellen}
+	Bei Interferenz zweier Wellen gleicher Frequenz ergibt sich
+	\begin{itemize}
+		\item konstruktive Interferenz: maximale Verstärkung bei einer Phasendifferenz von $\Delta \varphi =k*2 \pi$, entsprechend einem Gangunterschied von $\delta=k*\lambda$ mit $k \in \mathbb{N}$
+		\item destruktive Interferenz: maximale Abschwächung bei einer Phasendifferenz von $\Delta \varphi =(2k-1) \pi$, entsprechend einem Gangunterschied von $\delta=(2k-1)*\dfrac{\lambda}{2}$ mit $k \in \mathbb{N}$
+	\end{itemize}
+	\subsubsection{Überlagerung gegenlaufender Wellen}
+	Bei der Überlagerung gleicher, gegenlaufender Wellen ergeben sich \underline{stehende} Wellen:
+	\begin{itemize}
+		\item Es gibt Stellen, an denen die Amplitude stets 0 ist. Sie heißen Schwingungsknoten
+		\item Es gibt Stellen mit stets maximaler Amplitude$(\hat{s}_{res}=\hat{s}_1+\hat{s}_2)$. Sie heißen Schwingungsbäuche
+		\item Die Oszillatoren schwingen zwischen zwei Knoten phasengleich, aber mit unterschiedlicher Amplitude. Vor und nach einem Knoten schwingen sie gegenphasig.
+		\item Die Entfernung zwischen benachbarten Knoten beträgt $\dfrac{\lambda}{2}$, ebenso zwischen benachbarten Bäuchen.	
+	\end{itemize}
+	
+	%Auf gelbes Blatt 3/12 T
+	
+	Zum Zeitpunkt, an dem alle Oszillatoren die Ruhelage passieren, erreichen sie ihre maximale Schnelle. Diese ist unterschiedlich. Die Gesamtenergie liegt also als kinetische Energie vor.\\$(W_{ges}=\dfrac{1}{2}*m*\hat{v}^2)$\\
+	Zum Zeitpunkt, an dem alle Oszillatoren ihre maximale Elongation erreichen, sind alle Oszillatoren in Ruhe. Ihre Beschleunigung ist maximal.
+	Die Gesamtenergie liegt als potenzielle Energie vor.\\$(W_{ges} =\dfrac{1}{2}D\hat{s}^2)$.\\
+	Allgemein: Die stehende Welle transportiert keine Energie
+	An den Knoten besitzen die Oszillatoren keine Energie, an den Bäuchen besitzen die Oszillatoren maximale Energie.
+	\subsubsection*{Überlagerung auf der Verbindungsgerade zweier Wellenzentren}
+	%siehe Patricks Scanner
+	Zwei Wellenzentren an den Positionen $+d$ und $-d$ auf der $x$-Achse\\
+	$d=7$ cm;\hspace{10mm}$\lambda=6$ cm\\
+	Betrachtung des Gangunterschieds $\delta$ an der Stelle $x$\\
+	$\delta=\left|(x+d)-(d-x)\right|=2*|x|$\\
+	\begin{itemize}
+		\item Für die Schwingungsbäuche $\delta=k*\lambda$; $k \in \mathbb{N}_0$
+		\begin{align*}
+			2*x&=k*\lambda\\
+			x&=k*\dfrac{\lambda}{2}
+		\end{align*}
+		\item Für die Schwingungsknoten $\delta=(2k-1)*\dfrac{\lambda}{2}$; $k \in \mathbb{N}$
+		\begin{align*}
+			2*x&=(2k-1)*\dfrac{1}{2}\\
+			x&=(2k-1)*\dfrac{\lambda}{4}
+		\end{align*}
+	\end{itemize}
+	\subsection{Reflexion mechanischer Wellen}
+	%siehe Patricks Scanner
+	Am festen Ende werden aufgrund von Actio-Reactio Elongation und Schnelle umgekehrt.(Phasensprung um $\pi$ )\\
+	Am losen Ende werden Elongation und Schnelle ohne Phasensprung reflektiert.
+	
+	Bei Longitudinalwellen gelten die selben Gesetzmäßigkeiten bei der Reflexion wie bei Transversalwellen:\\
+	Am festen Ende werden Elongation und Schnelle umgekehrt (Phasensprung um $\pi$), am losen Ende behalten sie ihre Richtung bei.
+	\subsection{Eigenschwingungen auf begrenztem Wellenträger}
+	Auf einem begrenzten Wellenträger können sich nun bei bestimmten Anregungsfrequenzen, den sogenannten Eigenfrequenzen des Wellenträgers, stehende Wellen ausbilden.
+	Er zeigt dann ein typisches Resonanzverhalten (das heißt, die Schwingungsamplitude kann ein Vielfaches der Erregerschwingungsamplitude betragen). Die Eigenschwingungen heißen $k$-te harmonische ($k\in\mathbb{N}$).\\
+	\paragraph{Randbedingungen:} 
+	\begin{itemize}
+		\item Zwei gleiche Enden:
+		\begin{align*}
+			\lambda_k&=\dfrac{2*l}{k}	=\dfrac{\lambda_1}{k}\\
+			f_k&=k*\dfrac{c}{2*l}=k*\dfrac{c}{\lambda_1}=k*f_1
+		\end{align*}
+		\item zwei ungleiche Enden:
+		\begin{align*}
+			\lambda_k&=\dfrac{4*l}{2k-1}=\dfrac{1}{2k-1}*\lambda_1\\
+			f_k&=(2k-1)*\dfrac{c}{4*l}=(2k-1)*f_1
+		\end{align*}
+	\end{itemize}
+	\subsection{Interferenzphänomene}
+	\subsubsection{Interferenz mit zwei Quellen}
+	\paragraph{a) Wichtige Voraussetzungen für Interferenzphänomene:}
+	2 Sender mit gleicher Frequenz und konstanter Phasendifferenz nennt man Kohärenz.
+	Kohärenz ist eine unabdingbare Voraussetzung für die Entstehung eines über längere Zeit beobachtbaren Interferenzphänomens.
+	\paragraph{b)}
+	Ein beliebiger Oszillator im Wellenfeld wird immer von zwei Wellen erfasst und von beiden zu erzwungenen Schwingungen derselben Frequenz angeregt.
+	Entscheidend für das Ergebnis der Überlagerung in einem Punkt ist die dortige Phasendifferenz $\Delta \varphi$ der resultierenden Schwingungen. Diese ergibt sich aus dem Gangunterschied $\delta$
+	\paragraph{konstruktive Interferenz:}
+	\begin{align*}
+		\delta&=k*\lambda&&(k\in\mathbb{N})\\
+		\Delta\varphi&=k*2*\pi\\	
+	\end{align*}
+	\paragraph{destruktive Interferenz:}
+	\begin{align*}
+		\delta&=(2k-1)*\dfrac{\lambda}{2}&&(k\in\mathbb{N})\\
+		\Delta\varphi&=(2k-1)*\pi\\
+	\end{align*}
+\subsubsection{Interferenzkurven} Zwei kohärente Kreiswellen erzeugen durch Interferenz ein symmetrisches Wellenfeld aus konfokalen Interferenzhyperbeln konstruktiver und destruktiver Interferenz. Die Punkte mit Gangunterschied $\delta=k*\lambda\land k\in\mathbb{N}$ liegen auf Hyperbeln konstruktiver Interferenz, die Punkte mit Gangunterschied $\delta=(2k-1)*\dfrac{\lambda}{2}\land k\in\mathbb{N}$ auf Interferenzhyperbeln destruktiver Interferenz.
+\subsubsection{Energieverteilung} Die Energie an einem Ort ist proportional zu $\hat{s}^2$. An Orten maximaler Amplitude ist W proportional zu $(2*\hat{s})^2=4*\hat{s}^2$. An Orten destruktiver Interferenz ist $W_{ges}=0$. Im Mittel ergibt sich also: $W_{ges} \sim 2*\hat{s}^2$. Dies ist das selbe Ergebnis, das man durch die Addition der Schwingung zweier fortschreitender Wellen erhält.
+
+Durch Interferenz wird die Energieverteilung im Feld geändert, die Energiesumme bleibt jedoch erhalten.
+
+\subsection{Berechnung der Lage der Maxima und Minima im Interferenzfeld mithilfe trigonometrischer Berechnung} 
+Die Wellenstrahlen $s_1$ und $s_2$ verlaufen fast parallel unter dem Winkel $\alpha$ zur Mittelsenkrechten (optische Achse) und treffen sich im Punkt $P$ des optischen Schirms im Abstand $d$ vom der Mitte (des Schirms)
+\begin{align*}
+	\intertext{Es gilt:}
+	tan(\alpha)&=\dfrac{d}{a}\\
+	sin(\alpha)&=\dfrac{\delta}{g}
+\end{align*}
+\subsection{Das Huygens'sche Prinzip (nach Christiaan Huygens 1629-1695)}
+\textbf{Jeder Punkt einer Wellenfront kann als Ausgangspunkt von Elementarwellen angesehen werden.}\\(Mit gleichem $\Delta \varphi$ und $f$ wie die ursprüngliche Welle)
+Die Einhüllende aller Elementarwellen ergibt die neue Wellenfront
+
+\begin{enumerate}
+	\item[a)] Bild 1 Elementarwelle trifft auf Kaimauer
+	\item[b)] Bild 2 parallele Wellenfronten treffen auf Kaimauer
+	\item[c)] Bild 3 parallele Wellenfronten setzen sich zusammen aus Elementarwellen, Einführung der Wellennormale
+	\item[d)] Bild 4 punktförmiger Erreger erzeugt Wellen, die sich aus Elementarwellen zusammensetzen
+\end{enumerate}
+
+\end{document}
